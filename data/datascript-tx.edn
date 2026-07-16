@@ -1,0 +1,23 @@
+;; data/datascript-tx.edn — DataScript tx-data derived from src/statute/facts.cljc
+;; `statute.facts/catalog` (ADR-2607141700 Wave 0). Same shape as sibling files.
+
+[#:statute{:id "hnd.codigo-comercio-decreto-73-50"
+           :title "Código de Comercio (Decreto N.º 73-50)"
+           :jurisdiction "HND"
+           :kind :law
+           :law-number "Decreto N.º 73-50"
+           :url "https://www.wipo.int/wipolex/edocs/lexdocs/laws/es/hn/hn009es.pdf"
+           :url-provenance :official-wipo-lex-mirror
+           :enacted-date "1950-05-01"
+           :retrieved-at "2026-07-16"
+           :topic [:corporate-governance :incorporation]}
+ #:statute{:id "hnd.ley-transparencia-acceso-informacion-publica-decreto-170-2006"
+           :title "Ley de Transparencia y Acceso a la Información Pública (Decreto Legislativo N.º 170-2006)"
+           :jurisdiction "HND"
+           :kind :law
+           :law-number "Decreto Legislativo N.º 170-2006"
+           :url "https://www.tsc.gob.hn/web/leyes/Ley_de_Transparencia.pdf"
+           :url-provenance :official-tsc-gob-hn
+           :enacted-date "2006-12-30"
+           :retrieved-at "2026-07-16"
+           :topic [:information-disclosure :transparency]}]
