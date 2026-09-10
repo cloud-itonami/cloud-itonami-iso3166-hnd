@@ -37,7 +37,7 @@ twice, enforced off dedicated `:drafted?`/`:submitted?` booleans, never
 a `:status` value.
 
 Check 3 is deliberately **domicile-conditional, not a blanket rule**:
-`test/marketentry/governor_contract_test.clj`'s
+`test/marketentry/governor_contract_test.kotoba`'s
 `camara-jurisdiction-mismatch-does-not-fire-for-a-correct-match`
 proves a San Pedro Sula (Cortés) company correctly claiming CCIC
 proceeds through the ordinary escalate-then-approve path with no HARD
@@ -51,7 +51,7 @@ independent, contrasting fixtures (`eng-4`, `eng-5`) in
 structural fact this repository confirmed from the primary law text
 itself, not merely assumed:** Código de Comercio (Decreto N.º 73-50 --
 the SAME decree already cited in this repo's own
-`src/statute/facts.cljc`) Art. 384 requires registration at "la Cámara
+`src/statute/facts.kotoba`) Art. 384 requires registration at "la Cámara
 de Comercio e Industrias correspondiente"; Art. 385 states the
 Registro Público de Comercio "se llevará en las cabeceras de los
 departamentos" (kept PER DEPARTMENT, never one national registry);
@@ -65,7 +65,7 @@ Cámara de Comercio e Industrias de Cortés
 Cortés/San Pedro Sula). `marketentry.facts/camara-covers-department?`
 exposes ONLY these two independently-confirmed chamber/department
 pairs -- an unlisted chamber is NEVER assumed to have jurisdiction
-over any department; see `test/marketentry/facts_test.clj`'s
+over any department; see `test/marketentry/facts_test.kotoba`'s
 `camara-covers-department-is-honestly-scoped`.
 
 **ONCAE's own Registro de Proveedores y Contratistas del Estado is,
@@ -89,8 +89,8 @@ construction.** Two independent layers enforce this:
 - `marketentry.phase`'s phase table (`phase 0` through `phase 3`)
   never puts `:filing/draft` or `:filing/submit` in any phase's
   `:auto` set -- see `marketentry.phase`'s own docstring and
-  `test/marketentry/phase_test.clj`'s `filing-submit-never-auto`, plus
-  `test/marketentry/governor_contract_test.clj`'s
+  `test/marketentry/phase_test.kotoba`'s `filing-submit-never-auto`, plus
+  `test/marketentry/governor_contract_test.kotoba`'s
   `filing-draft-and-submit-never-auto-commit`.
 
 The actor may intake an engagement, assess a jurisdiction and draft a
@@ -188,7 +188,7 @@ as the other `cloud-itonami-iso3166-*` siblings:
   74-2001 Art. 34, explicitly CENTRALIZED), SAR RTN (Código
   Tributario, Decreto No. 170-2016), and — reusing the SAME Código de
   Comercio (Decreto N.º 73-50) citation already established in this
-  repo's own `src/statute/facts.cljc`, never a second, different one —
+  repo's own `src/statute/facts.kotoba`, never a second, different one —
   the flagship territorially-decentralized Cámara de Comercio /
   Registro Público de Comercio regime (Arts. 384-386, 420) and the
   foreign-company permanent-representative requirement (Art. 308
@@ -201,9 +201,9 @@ as the other `cloud-itonami-iso3166-*` siblings:
   MULTI-AUTHORITY TERRITORIAL-JURISDICTION CONSISTENCY test, grounded
   in a country whose commercial registry has no single national
   instance (see the namespace docstrings and
-  `test/marketentry/governor_contract_test.clj`'s two contrasting
+  `test/marketentry/governor_contract_test.kotoba`'s two contrasting
   fixtures for the full honest disclosure).
-- `src/statute/facts.cljc` -- general-law catalog (pre-existing, not
+- `src/statute/facts.kotoba` -- general-law catalog (pre-existing, not
   modified by this Wave): Código de Comercio (Decreto N.º 73-50) and
   the Ley de Transparencia y Acceso a la Información Pública (Decreto
   Legislativo N.º 170-2006).
@@ -228,7 +228,7 @@ Alongside the market-entry / statute catalogs, this repo carries a
 `com-junkawasaki/root`) — national dishes, protected products, beverages,
 crafts, festivals and heritage sites for Honduras:
 
-- `src/culture/facts.cljc` — the catalog, source of truth (keyed by
+- `src/culture/facts.kotoba` — the catalog, source of truth (keyed by
   uppercase ISO3, mirroring `statute.facts`).
 - `schema/culture.edn` — DataScript schema.
 - `data/culture-tx.edn` — derived DataScript tx-data (regenerated from
